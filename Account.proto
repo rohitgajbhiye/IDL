@@ -1,0 +1,18 @@
+syntax = "proto3";
+option go_package="def/account";
+
+// Essential User data needs to communicate across systems
+message Account {
+    // uuid can be used as identifier
+    string id =1;
+    string first_name =2;
+    string last_name  = 3;
+    AccountType type = 4;
+}
+
+enum AccountType {
+    DEFAULT =0;
+    ACTIVE =1;
+    IN_ACTIVE=2;
+    CLOSED=3;
+}

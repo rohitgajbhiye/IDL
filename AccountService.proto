@@ -1,0 +1,8 @@
+syntax = "proto3";
+import "Account.proto";
+option go_package="def/account";
+
+
+service AccountService{
+    rpc createAccount(Account) returns (Account);
+}
